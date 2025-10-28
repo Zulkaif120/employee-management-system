@@ -1,10 +1,11 @@
-package com.example.employeemanagement.service;
+package com.zulkaif.employeemanagement.service;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.example.employeemanagement.model.Employee;
-import com.example.employeemanagement.repository.EmployeeRepository;
+
+import com.zulkaif.employeemanagement.model.Employee;
+import com.zulkaif.employeemanagement.repository.EmployeeRepository;
 
 @Service
 public class EmployeeService {

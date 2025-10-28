@@ -1,10 +1,11 @@
-package com.example.employeemanagement.controller;
+package com.zulkaif.employeemanagement.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
-import com.example.employeemanagement.model.Employee;
-import com.example.employeemanagement.service.EmployeeService;
+
+import com.zulkaif.employeemanagement.model.Employee;
+import com.zulkaif.employeemanagement.service.EmployeeService;
 
 @RestController
 @RequestMapping("/api/employees")
