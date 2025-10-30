@@ -1,6 +1,7 @@
 package com.zulkaif.employeemanagement.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
@@ -30,12 +31,13 @@ public class EmployeeController {
     }
 
     @PutMapping("/{id}")
-    public Employee update(@PathVariable int id, @RequestBody Employee employee) {
-        return service.updateEmployee(id, employee);
+    public ResponseEntity<Employee> update(@PathVariable int id, @RequestBody Employee employee) {
+        Employee updatedEmployee = service.updateEmployee(id, employee);
+        return ResponseEntity.ok(updatedEmployee);
     }
 
     @DeleteMapping("/{id}")
-    public void delete(@PathVariable int id) {
-        service.deleteEmployee(id);
+    public ResponseEntity<String> delete(@PathVariable int id) {
+    	return ResponseEntity.ok("Employee deleted successfully");
     }
 }
